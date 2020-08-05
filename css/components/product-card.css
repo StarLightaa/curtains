@@ -1,0 +1,140 @@
+.product-items{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product-items .product-item__wrapper{
+  margin-bottom: 35px;
+}
+
+.product-item__wrapper{
+  position: relative;
+  width: 263px;
+}
+
+.product-item__hit,
+.product-item__discount{
+  position: absolute;
+  top: -3px;
+  height: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  z-index: 5;
+  text-align: center;
+  padding: 0 3px 0 4px;
+}
+
+.product-item__hit{
+  right: 54px;
+  background-color: #418d44;
+  display: none;
+}
+
+.product-item__hit.active{
+  display: block;
+}
+
+.product-item__discount{
+  right: 10px;
+  background-color: #ff0014;
+  display: none;
+}
+
+.product-item__discount.active{
+  display: block;
+}
+
+.product-item__img{
+  position: relative;
+}
+
+.product-item__hover-text{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  padding: 10px 10px 10px 30px;
+  border: none;
+  border-radius: 5px;
+  display: none;
+}
+
+.product-item__img:hover .product-item__hover-text{
+  display: block;
+}
+
+.product-item__hover-text:before{
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url('../images/eye.svg') no-repeat;
+  background-size: 18px 18px;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translate(25%,-50%);
+}
+
+.product-item__img{
+  max-width: 100%;
+}
+
+.product-item__cost{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.product-item__prices{
+  display: flex;
+  align-items: flex-end;
+}
+
+.product-item__price{
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.product-item__old-price{
+  color: #999;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: line-through;
+  display: none;
+}
+
+.product-item__old-price.active{
+  display: block;
+}
+
+.product-item__basket{
+  cursor: pointer;
+  display: none;
+}
+
+.product-item__basket.active{
+  display: block;
+}
+
+.product-item__text{
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.product-item__height,
+.product-item__density{
+  color: #9f9f9f;
+}
+
+.product-item__height span,
+.product-item__density span{
+  color: #000;
+}

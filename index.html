@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ткани</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components/aside.css">
+  <link rel="stylesheet" href="css/components/left-filter.css">
+  <link rel="stylesheet" href="css/components/top-filter.css">
+  <link rel="stylesheet" href="css/components/top-sort-panel.css">
+  <link rel="stylesheet" href="css/components/product-card.css">
+</head>
+<body>
+  <section class="curtains-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__list-item">
+            <a href="#">Главная</a>
+          </li>
+          <li class="breadcrumbs__list-item">
+            <a href="#">Ткани для штор</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="catalog">
+        <div class="catalog__inner">
+          <label class="asideToggle" id="toogleLabel" onclick="toogleAside()">
+            <input id="asideToggle" type="checkbox" hidden>
+            <span id="toggleText">Скрыть</span>
+          </label>
+          <aside class="catalog__inner-aside" id="myAside">         
+            <ul class="nav__list catalog-aside__items">
+              <li>
+                <input id="group-1" type="checkbox" hidden checked/>
+                <label class="catalog-aside__item-text aside-level-title" for="group-1">
+                  <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                   Категории
+                </label>
+                <ul class="group-list">
+                  <li>
+                    <input id="sub-group-1" type="checkbox" hidden checked/>
+                    <label class="catalog-aside__item-text aside-level-high" for="sub-group-1">
+                      <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                       Ткани для штор
+                    </label>
+                    <ul class="sub-group-list">
+                      <li>
+                        <input id="sub-sub-group-1" type="checkbox" hidden checked/>
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-1">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Вуаль
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Вуаль Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Шелк</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Вуаль печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Вуаль однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Вуаль радуга</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input id="sub-sub-group-2" type="checkbox" hidden />
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-2">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Тюль
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Тюль печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Тюль однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Тюль Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Тюль радуга</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input id="sub-sub-group-3" type="checkbox" hidden />
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-3">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Портьера с рисунком 280
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера радуга</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input id="sub-sub-group-4" type="checkbox" hidden />
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-4">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Портьера однотонная
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера радуга</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input id="sub-sub-group-5" type="checkbox" hidden />
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-5">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Портьера 150
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Портьера радуга</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input id="sub-sub-group-6" type="checkbox" hidden />
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-6">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Имитация льна
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Лен Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Лен печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Лен однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Лен радуга</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input id="sub-sub-group-7" type="checkbox" hidden />
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-7">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Сетка
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Сетка Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Сетка печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Сетка однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Сетка радуга</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input id="sub-sub-group-8" type="checkbox" hidden />
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-8">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Органза
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Органза Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Органза печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Органза однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Органза радуга</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input id="sub-sub-group-9" type="checkbox" hidden />
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-9">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Нитевой занавес
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Занавес Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Занавес печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Занавес однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Занавес радуга</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input id="sub-sub-group-10" type="checkbox" hidden />
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-10">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Негорючие ткани
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Ткани Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Ткани печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Ткани однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Ткани радуга</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <li class="catalog-aside__item-text aside-level-medium"><a href="#">Микровуаль</a></li>
+                      </li>
+                      <li>
+                        <li class="catalog-aside__item-text aside-level-medium"><a href="#">Скатерти</a></li>
+                      </li>
+                      <li>
+                        <li class="catalog-aside__item-text aside-level-medium"><a href="#">Полуорганза однотонная</a></li>
+                      </li>
+                      <li>
+                        <input id="sub-sub-group-11" type="checkbox" hidden />
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-11">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Производственные остатки
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Остатки Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Остатки печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Остатки однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Остатки радуга</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <li class="catalog-aside__item-text aside-level-medium"><a href="#">Синтепон</a></li>
+                      </li>
+                      <li>
+                        <input id="sub-sub-group-12" type="checkbox" hidden />
+                        <label class="catalog-aside__item-text aside-level-medium" for="sub-sub-group-12">
+                          <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                           Компаньон
+                        </label>
+                        <ul class="sub-sub-group-list">
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Компаньон Жаккард</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Компаньон печать</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Компаньон однотонная</a></li>
+                          <li class="catalog-aside__item-text aside-level-low"><a href="#">Компаньон радуга</a></li>
+                        </ul>
+                      </li>
+  
+                    </ul>
+                  </li>
+                  <li>
+                    <input id="sub-group-2" type="checkbox" hidden />
+                    <label class="catalog-aside__item-text aside-level-high" for="sub-group-2">
+                      <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                      Готовые изделия
+                    </label>
+                    <ul class="sub-group-list">
+                      <li>
+                        <li class="catalog-aside__item-text aside-level-medium"><a href="#">Изделие №1</a></li>
+                      </li>
+                      <li>
+                        <li class="catalog-aside__item-text aside-level-medium"><a href="#">Изделие №2</a></li>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <input id="sub-group-3" type="checkbox" hidden />
+                    <label class="catalog-aside__item-text aside-level-high" for="sub-group-3">
+                      <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                      Текстиль для дома 
+                    </label>
+                    <ul class="sub-group-list">
+                      <li>
+                        <li class="catalog-aside__item-text aside-level-medium"><a href="#">Текстиль №1</a></li>
+                      </li>
+                      <li>
+                        <li class="catalog-aside__item-text aside-level-medium"><a href="#">Текстиль №2</a></li>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <input id="sub-group-4" type="checkbox" hidden />
+                    <label class="catalog-aside__item-text aside-level-high" for="sub-group-4">
+                      <span class="catalog-aside__item-arrow fa fa-caret-right"></span>
+                      Фурнитура и карнизы
+                    </label>
+                    <ul class="sub-group-list">
+                      <li>
+                        <li class="catalog-aside__item-text aside-level-medium"><a href="#">Фурнитура №1</a></li>
+                      </li>
+                      <li>
+                        <li class="catalog-aside__item-text aside-level-medium"><a href="#">Фурнитура №2</a></li>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                </li>
+            </ul>
+            <div class="catalog-aside__filters">
+              <div class="catalog-aside__filter">
+                <div class="catalog-aside__filter-text">Высота рулона, см</div>
+                <div class="catalog-aside__filter-input-wrapper">
+                  <input class="catalog-aside__filter-input" value="300" type="text">
+                  <div class="input-delimiter"></div>
+                  <input class="catalog-aside__filter-input" value="600" type="text">
+                </div> 
+              </div>
+              <div class="catalog-aside__filter">
+                <div class="catalog-aside__filter-text">Плотность ткани, г/кв.м</div>
+                <div class="catalog-aside__filter-input-wrapper">
+                  <input class="catalog-aside__filter-input" value="300" type="text">
+                  <div class="input-delimiter"></div>
+                  <input class="catalog-aside__filter-input" value="600" type="text">
+                </div> 
+              </div>
+              <div class="catalog-aside__filter">
+                <div class="catalog-aside__filter-text">Защита от солнца, %</div>
+                <div class="catalog-aside__filter-input-wrapper">
+                  <input class="catalog-aside__filter-input" value="80" type="text">
+                  <div class="input-delimiter"></div>
+                  <input class="catalog-aside__filter-input" value="100" type="text">
+                </div> 
+              </div>
+            </div>
+          </aside>
+          <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> -->
+          <div class="catalog__inner-list" id="myCatalog">
+            <div class="catalog__title">Ткани для штор</div>
+
+            <div class="catalog__filter">
+              <div class="catalog__filter-options">
+                <div class="catalog__filter-text">Фильтр:</div>
+                <div class="catalog__filter-price">
+                  <div class="catalog__filter-price-text">Цена</div>
+                  <input class="catalog__filter-input" value="300" type="text">
+                  <div class="input-delimiter"></div>
+                  <input class="catalog__filter-input" value="900" type="text" >
+                </div>
+
+                <div class="dropdown-list catalog__filter-dropdown">
+                  <select class="select">
+                    <option value="30" selected disabled>Цвет</option>
+                    <option value="60">Белый</option>
+                    <option value="90">Черный</option>
+                  </select>
+                </div>
+
+                <div class="dropdown-list catalog__filter-dropdown">
+                  <select class="select">
+                    <option value="30" selected disabled>Дизайн</option>
+                    <option value="60">Светлый</option>
+                    <option value="90">Темный</option>
+                  </select>
+                </div>
+
+                <div class="catalog__filter__checkbox-wrapper">
+                  <input class="checkbox-input" type="checkbox" id="cb1" checked>
+                  <label class="checkbox-label" for="cb1">Негорючая обработка</label>
+                </div>
+              </div>
+              <button class="catalog__filter-reset">Сбросить</button>
+            </div>
+
+
+            <div class="catalog__sort">
+              <div class="catalog__sort__btn-group">
+                <div class="catalog__sort-text">Сортировка:</div>
+                <button class="button catalog__sort-btn active">
+                  По популярности
+                  <!-- <img src="images/chart.svg" alt=""> -->
+                  <span class="fa fa-signal"></span>
+                </button>
+                <button class="button catalog__sort-btn">
+                  По цене
+                </button>
+                <button class="button catalog__sort-btn">
+                  Скидки
+                </button>
+                <button class="button catalog__sort-btn">
+                  Новинки
+                </button>
+              </div>
+              <div class="catalog__sort__show-options">
+                <div class="catalog__sort-show-count">
+                  <div class="catalog__sort-show-count-text">
+                    Показывать по
+                  </div>
+                  <div class="dropdown-list">
+                    <select class="select">
+                      <option value="30" selected>30</option>
+                      <option value="60">60</option>
+                      <option value="90">90</option>
+                    </select>
+                  </div>
+
+                  
+                  
+                </div>
+  
+                <div class="pagination">
+                  <ul class="pagination-list">
+                    <li class="button pagination-list__item active"><a href="#">1</a></li>
+                    <li class="button pagination-list__item"><a href="#">2</a></li>
+                    <li class="button pagination-list__item"><a href="#">3</a></li>
+                    <li class="button pagination-list__item"><a href="#">4</a></li>
+                    <li class="button pagination-list__item"><a href="#">5</a></li>
+                    <li class="button pagination-list__item active pagination-list__item--arrow">
+                      <a href="#">
+                        <img src="images/arrow-right.svg" alt="">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="product-items">
+              <div class="product-item__wrapper">
+                <p class="product-item__hit active">хит</p>
+                <p class="product-item__discount active">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-1.png" alt="" >
+                    <button class="product-item__hover-text active">
+                      <span>Быстрый просмотр</span>
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price active">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket active" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+              <div class="product-item__wrapper">
+                <p class="product-item__hit active">хит</p>
+                <p class="product-item__discount active">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-2.png" alt="" >
+                    <button class="product-item__hover-text">
+                      <span>Быстрый просмотр</span>
+                      
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price active">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket active" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+              <div class="product-item__wrapper">
+                <p class="product-item__hit active">хит</p>
+                <p class="product-item__discount active">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-1.png" alt="" >
+                    <button class="product-item__hover-text">
+                      <span>Быстрый просмотр</span>
+                      
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price active">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket active" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+              <div class="product-item__wrapper">
+                <p class="product-item__hit">хит</p>
+                <p class="product-item__discount">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-2.png" alt="" >
+                    <button class="product-item__hover-text">
+                      <span>Быстрый просмотр</span>
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket active" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+              <div class="product-item__wrapper">
+                <p class="product-item__hit">хит</p>
+                <p class="product-item__discount">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-1.png" alt="" >
+                    <button class="product-item__hover-text">
+                      <span>Быстрый просмотр</span>
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+              <div class="product-item__wrapper">
+                <p class="product-item__hit">хит</p>
+                <p class="product-item__discount">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-1.png" alt="" >
+                    <button class="product-item__hover-text">
+                      <span>Быстрый просмотр</span>
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket active" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+              <div class="product-item__wrapper">
+                <p class="product-item__hit">хит</p>
+                <p class="product-item__discount">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-1.png" alt="" >
+                    <button class="product-item__hover-text">
+                      <span>Быстрый просмотр</span>
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket active" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+              <div class="product-item__wrapper">
+                <p class="product-item__hit">хит</p>
+                <p class="product-item__discount">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-1.png" alt="" >
+                    <button class="product-item__hover-text">
+                      <span>Быстрый просмотр</span>
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket active" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+              <div class="product-item__wrapper">
+                <p class="product-item__hit">хит</p>
+                <p class="product-item__discount">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-1.png" alt="" >
+                    <button class="product-item__hover-text">
+                      <span>Быстрый просмотр</span>
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket active" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+
+              <div class="product-item__wrapper">
+                <p class="product-item__hit">хит</p>
+                <p class="product-item__discount">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-1.png" alt="" >
+                    <button class="product-item__hover-text">
+                      <span>Быстрый просмотр</span>
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket active" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+
+              <div class="product-item__wrapper">
+                <p class="product-item__hit">хит</p>
+                <p class="product-item__discount">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-1.png" alt="" >
+                    <button class="product-item__hover-text">
+                      <span>Быстрый просмотр</span>
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket active" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+
+              <div class="product-item__wrapper">
+                <p class="product-item__hit">хит</p>
+                <p class="product-item__discount">-10%</p>
+                <div class="product-item" href="">
+                  <div class="product-item__img">
+                    <img src="images/product-1.png" alt="" >
+                    <button class="product-item__hover-text">
+                      <span>Быстрый просмотр</span>
+                    </button>
+                  </div>
+                  
+                  <div class="product-item__cost">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">250 руб.</div>
+                      <div class="product-item__old-price">300 руб.</div>
+                    </div>
+                    <img class="product-item__basket active" src="images/basket.png" alt="">
+                  </div>
+                  
+                  <div class="product-item__text">Нитевой занавес Однотонный с камнями</div>
+                  <div class="product-item__height">Высота рулона: <span>300 см</span></div>
+                  <div class="product-item__density">Плотность ткани: <span>100г/кв.м</span></div>
+                </div>
+              </div>
+
+
+            </div>
+            <div class="pagination">
+              <ul class="pagination-list">
+                <li class="button pagination-list__item active"><a href="#">1</a></li>
+                <li class="button pagination-list__item"><a href="#">2</a></li>
+                <li class="button pagination-list__item"><a href="#">3</a></li>
+                <li class="button pagination-list__item"><a href="#">4</a></li>
+                <li class="button pagination-list__item"><a href="#">5</a></li>
+                <li class="button pagination-list__item active pagination-list__item--arrow">
+                  <a href="#">
+                    <img src="images/arrow-right.svg" alt="">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+  
+
+
+
+
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

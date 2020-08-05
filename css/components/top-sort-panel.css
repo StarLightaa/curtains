@@ -1,0 +1,35 @@
+.catalog__sort{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  font-size: 13px;
+}
+
+.catalog__sort__btn-group{
+  display: flex;
+  align-items: center;
+}
+
+.catalog__sort-btn{
+  margin-left: 10px;
+  height: 28px;
+}
+
+.catalog__sort-btn.active span{
+  transform: scale(1, -1) rotate(90deg); 
+}
+
+.catalog__sort__show-options{
+  display: flex;
+  align-items: center;
+}
+
+.catalog__sort-show-count{
+  display: flex;
+  align-items: center;
+}
+
+.catalog__sort-show-count-text{
+  margin-right: 8px;
+  color: #c8c8c8;
+}

@@ -1,0 +1,176 @@
+html{
+  box-sizing: border-box;
+}
+
+*,*::before, *::after{
+  box-sizing: inherit;
+}
+
+h1,h2,h3,h4,h5,
+h6{
+  margin: 0;
+  font-size: inherit;
+}
+
+label{
+  margin: 0;
+}
+
+a, 
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active, a:focus { outline: none; }
+
+button:active, button:focus {
+  outline: none;
+}
+
+.button{
+  background-color: transparent;
+  color: #c8c8c8;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+}
+
+.button:hover{
+  text-decoration: none;
+}
+
+ul,
+li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+input{
+  height: 28px;
+}
+img{
+  vertical-align: top;
+}
+
+.dropdown-list{
+  position: relative;
+}
+
+.dropdown-list:after{
+  content: "";
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #c4c4c4 transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-10px,-50%);
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.select{
+  padding: 0 9px;
+  height: 28px;
+  color: #000;
+  font-weight: 600;
+  background-color: #fff;
+  border: 1px solid #c8c8c8;
+  cursor: pointer;
+  border-radius: 3px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  z-index: 10;
+}
+
+.select:focus,
+.select:hover{
+  outline: none;
+  border: 1px solid #bbb;
+}
+
+.select option{
+  background: #fff;
+  padding: 0 10px;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000;
+}
+
+.container{
+  max-width: 1170px;
+}
+
+.active{
+  color: #418d44;
+}
+
+.input-delimiter{
+  width: 9px;
+  height: 2px;
+  background-color: #727272;
+  margin: 0 6px;
+}
+
+/* <--End Global Styles --> */
+
+.breadcrumbs__list{
+  padding: 20px 0 25px;
+}
+
+.breadcrumbs__list-item{
+  display: inline-block;
+  position: relative;
+}
+
+.breadcrumbs__list-item::after{
+  content: "\2013";
+  margin: 0 3px;
+}
+
+.breadcrumbs__list-item:last-child::after{
+  display: none;
+}
+
+.catalog__inner{
+  position: relative;
+}
+
+.catalog__title{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+  /* Pagination */
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination-list{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.pagination-list__item{
+  border: none;
+  margin-left: 10px;
+}
+
+.pagination-list__item--arrow{
+  display: block;
+  width: 16px;
+  height: 16px;
+}

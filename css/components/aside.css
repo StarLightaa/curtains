@@ -1,0 +1,126 @@
+.asideToggle{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90px;
+  height: 15px;
+  border-radius: 100px 100px 0px 0px / 100px 100px 0px 0px;
+  padding-right: 9px;
+  font-size: 13px;
+  background-color: #418d44;
+  color: #fff;
+  font-weight: 600;
+  position: absolute;
+  top: 250px;
+  left: 280px;
+  z-index: 15;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.asideToggle:after{
+  content: "";
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(75%,-25%);
+  cursor: pointer;
+}
+
+.asideToggle.rotate:after{
+  transform: translate(75%,-25%) scale(-1); 
+}
+
+.asideToogle span{
+  float: right;
+}
+
+.catalog__inner-aside{
+  min-width: 265px;
+  background-color: #e5e5e5;
+  border: none;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.catalog__inner-list{
+  display: inline-block;
+  vertical-align: top;
+  max-width: 835px;
+  margin-bottom: 25px;
+  margin-left: 30px;
+}
+
+.catalog-aside__items{
+  padding: 20px 15px 0 15px;
+}
+
+.aside-level-title{
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.aside-level-high{
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.aside-level-medium{
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.aside-level-low{
+  font-size: 13px;
+}
+
+.catalog-aside__item-text{
+  width: 100%;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.catalog-aside__item-arrow{
+  font-size: 14px;
+  line-height: 21px;
+  float: right;
+  color: #999;
+  padding-right: 5px;
+}
+
+.nav__list input[type=checkbox]:checked + label > span {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(-90deg);
+  color: #418d44;
+  line-height: 14px;
+}
+
+.nav__list input[type=checkbox]:checked + label + ul {
+  max-height: 1000px; 
+}
+
+.group-list, .sub-group-list, .sub-sub-group-list {
+  height: 100%;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .5s ease-in-out;
+  transition: max-height .5s ease-in-out;
+}
+
+label > span {
+  float: right;
+  -webkit-transition: -webkit-transform .65s ease;
+  transition: transform .65s ease;
+}
+
+.sub-group-list,
+.sub-sub-group-list{
+  padding-left: 20px;
+}
